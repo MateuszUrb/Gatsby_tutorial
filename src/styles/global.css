@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;700;900&family=Roboto+Mono:wght@200&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(to right, #1a1a1a, #756225);
+}
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-gap: 20px;
+  grid-template-rows: auto 1fr auto;
+}
+
+nav {
+  display: flex;
+  padding: 30px 50px;
+  background-color: #1a1a1a;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  place-items: center;
+}
+
+nav .links > *:hover {
+  color: #756225;
+  transition: color 0.5s ease-in-out;
+}
+
+footer {
+  padding: 20px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
