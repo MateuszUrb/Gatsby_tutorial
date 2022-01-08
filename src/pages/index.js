@@ -2,8 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data)
+
   return (
     <Layout>
       <section className={styles.header}>
@@ -15,7 +19,20 @@ export default function Home() {
             Portfolio
           </Link>
         </div>
+        <Img fluid={data.file.childImageSharp.fluid} />
       </section>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query Banner {
+    file(relativePath: { eq: "website.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

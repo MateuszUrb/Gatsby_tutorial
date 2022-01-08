@@ -6,7 +6,7 @@ function Layout({ children }) {
   return (
     <div className="wrapper">
       <Navigation />
-      <div className="content">{children}</div>
+      <div style={{ textAlign: "center", margin: 50 }}>{children}</div>
       <footer>
         <p>&copy; 2022 Matthew</p>
       </footer>
